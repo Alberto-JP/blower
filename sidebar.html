@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Blower</title>
+  <link rel="stylesheet" href="res/css/bootstrap.min.css">
+  <link rel="stylesheet" href="res/css/bootstrap-icons.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 10px;
+	  background-color: #444444;
+	  color: #a0a0a0;
+	  box-sizing: border-box;
+    }
+    #reload-btn {
+      margin-bottom: 10px;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+
+    #content {
+
+        div {
+          display: flex;
+        }
+
+        .img-container {
+          width: 100%;
+          margin-top: 1em;
+          padding: 0.3em;
+          justify-content: space-between;
+          align-items: center;
+          gap:5px;
+          flex-basis: 100%;
+          box-shadow: 0 0 2px black;
+          border-radius: 5px;
+          background-color: rgb(245, 245, 245);
+          
+          div:nth-of-type(1) {
+            //outline: auto;
+            width: 19%;
+            justify-content: center;
+          }
+
+          div:nth-of-type(2) {
+            width: 49%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+
+          div:nth-of-type(3) {
+            width: 29%;
+            justify-content: space-evenly;
+            //outline: auto;
+          }
+        }
+
+        img {
+          width:80px;
+          height:80px;
+        }
+
+        i {
+          color: black;
+          font-size: 2em;
+        }
+    }
+	
+	
+	.spawn {
+            animation-duration: 3s;
+            animation-name: fadeOutLate;
+			background-color: slategray;
+        }
+
+
+	@keyframes fadeOut {
+		from { /* al inicio */
+			opacity: 1;
+		}
+
+		to { /* al final */
+			opacity: 0.2;
+		}
+	}
+	
+	@keyframes fadeOutLate {
+	  0% {
+		opacity: 1;
+	  }
+	  80% {
+		opacity: 0.8;
+	  }
+	  100% {
+		opacity: 0;
+	  }
+	}
+
+  </style>
+</head>
+<body>
+  <div>
+    <button id="btn-reload"><i class="bi bi-arrow-clockwise"></i></button>
+    <button id="btn-patch"><i class="bi bi-box-fill"></i></button>
+    <button id="btn-unpatch"><i class="bi bi-unlock2-fill"></i></button>
+    <button id="btn-images"><i class="bi bi-camera-fill"></i></button>
+    <button id="btn-downloadall"><i class="bi bi-file-earmark-arrow-down"></i></button>
+  </div>
+  <ul id="console" class="text-center list-unstyled"></ul>
+  <div id="content" class="text-center"></div>
+  <script src="res/js/logger.js"></script>
+  <script src="sidebar.js"></script>
+</body>
+</html>

@@ -1,2 +1,6 @@
-# blower
-Firefox MV2 Add-on that retrieves &lt;img> tags src attribute from actual tab page
+@ windows users
+open up firefox
+
+> about:debugging > This firefox > Load temporary add-on button
+
+> about:addons if you have problems with add-on permissions

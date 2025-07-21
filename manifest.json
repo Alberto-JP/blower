@@ -1,0 +1,33 @@
+{
+    "description": "Loads a HTML page in a sidebar with a reload button.",
+    "manifest_version": 2,
+    "name": "Blower",
+    "version": "2.0",
+    "homepage_url": "https://a.b",
+    "icons": {
+        "48": "res/icons/i48.png"
+    },
+    "permissions": [
+        "activeTab",
+        "tabs",
+        "<all_urls>"
+    ],
+    "sidebar_action": {
+        "default_icon": "res/icons/toolbar32.png",
+        "default_title": "Blower v2.0",
+        "default_panel": "sidebar.html",
+        "open_at_install":true
+    },
+    "incognito": "spanning",
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "my-sidebar@example.com",
+            "strict_min_version": "91.0"
+        }
+    },
+    "web_accessible_resources": [
+        "*.js",
+        "res/*.js",
+		"res/js/*.js"
+    ]
+}

@@ -1,0 +1,1 @@
+start firefox --private-window "about:debugging" "about:addons"
